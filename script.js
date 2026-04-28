@@ -10,7 +10,17 @@ function leggTil(){
     li.addEventListener('click', function(){
         li.classList.toggle('ferdig');
     });
-    
+
+    const deleteBtn = document.createElement('button');
+    deleteBtn.textContent = 'Slett';
+    deleteBtn.classList.add('delete-btn');
+
+    deleteBtn.addEventListener('click', function(e){
+        e.stopPropagation();
+        li.remove();
+    });
+
+    li.appendChild(deleteBtn);
     document.getElementById('task-list').appendChild(li);
     input.value = '';
 

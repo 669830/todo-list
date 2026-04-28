@@ -65,6 +65,9 @@ li {
   margin-bottom: 8px;
   cursor: pointer;
   transition: opacity 0.2s;
+    display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 li:hover { border-color: #555; }
@@ -72,4 +75,18 @@ li:hover { border-color: #555; }
 .ferdig {
   text-decoration: line-through;
   opacity: 0.4;
+}
+.delete-btn {
+  background: transparent;
+  color: #ff6b6b;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+
+.delete-btn:hover {
+  background: rgba(255, 107, 107, 0.1);
 }
