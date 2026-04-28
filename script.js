@@ -1,20 +1,24 @@
-function addTask(){
-    const input = document.getElementById('task-inpuy');
-    const text = input.ariaValueMax.trim();
+function leggTil(){
+    const input = document.getElementById('task-input');
+    const tekst = input.value.trim();
 
-    if(text === '') return;
+    if(tekst === '') return;
 
     const li = document.createElement('li');
-    li.textContent = text;
+    li.textContent = tekst;
 
+    li.addEventListener('click', function(){
+        li.classList.toggle('ferdig');
+    });
+    
     document.getElementById('task-list').appendChild(li);
     input.value = '';
 
 }
 
-document.getElementById('add-btn').addEventListener('click', addTask);
+document.getElementById('add-btn').addEventListener('click', leggTil);
 document.getElementById('task-input').addEventListener('keydown', function(e){
     if(e.key === 'Enter') {
-        addTask();
+        leggTil();
     }
 });

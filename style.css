@@ -56,3 +56,20 @@ button {
 button:hover { background: #a8d040; }
 
 ul { list-style: none; }
+
+li {
+  padding: 14px 16px;
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 10px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+li:hover { border-color: #555; }
+
+.ferdig {
+  text-decoration: line-through;
+  opacity: 0.4;
+}
